@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Psudo Elements</title>
+        <style>
+            section {
+                margin-left: 20px;
+            }
+
+            .link {
+                display: flex;
+                align-items: center;
+            }
+
+            .link::after {
+                content: ' (' attr(href) ')';
+            }
+
+            .link::before{
+                content: '';
+                background: url(assets/images/info_icon.png) no-repeat center center/cover;
+                width: 20px;
+                height: 20px;
+                z-index: -1;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <p>
+                Behold, a website for searching everything!
+            </p>
+            <a href="https://www.google.com">Search Now!</a>
+            <a class="link" href="https://www.google.com/search">Search Now!</a>
+        </section>
+    </body>
+</html>

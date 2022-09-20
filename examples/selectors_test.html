@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Selectors</title>
+        <style>
+            section div.special + span {
+                color: red;
+            }
+
+            .thanks {
+                display: none;
+            }
+
+            input[type="checkbox"]:checked + span {
+                display: inline;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <span>
+                check me!
+            </span>
+            <input type="checkbox">
+            <span class="thanks">Thank you!</span>
+        </section>
+    </body>
+</html>
