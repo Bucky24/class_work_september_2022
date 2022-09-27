@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button connecting</title>
+    </head>
+    <body>
+        <button id="a_button" onClick="onButtonClicked()">
+            Click meeee
+        </button>
+        <script>
+            function onButtonClicked() {
+                console.log("Button clicked!");
+                console.log(this);
+            };
+
+            var button = document.getElementById("a_button");
+            button.addEventListener("click", onButtonClicked);
+        </script>
+    </body>
+</html>
