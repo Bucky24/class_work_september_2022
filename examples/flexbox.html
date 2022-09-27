@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexbox</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex div {
+                padding: 10px;
+            }
+
+            .box {
+                background-color: green;
+                width: 50px;
+                height: 50px;
+                border: 1px solid black;
+                flex: 0 0 50px;
+            }
+
+            section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+                Name
+            </div>
+            <div class="flex">
+                <div>content1</div>
+                <div>content2</div>
+                <div>content3</div>
+                <div>content4</div>
+            </div>
+        </header>
+        <section>
+            <div class="box">start</div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box">end</div>
+        </section>
+    </body>
+</html>

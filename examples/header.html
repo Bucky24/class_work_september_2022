@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Header thing</title>
+        <style>
+            :root {
+                --background: #90cccc;
+            }
+            html, body {
+                margin: 0;
+            }
+
+            header {
+                display: flex;
+                background-color: var(--background);
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            ul {
+                display: flex;
+                height: 23px;
+                margin-right: 50px;
+            }
+
+            li {
+                list-style: none;
+                margin-right: 10px;
+                border-bottom: 3px solid teal;
+                display: inline;
+                height: 100%;
+                color: teal;
+            }
+
+            h1 {
+                background-color: teal;
+                padding: 10px;
+                padding-left: 50px;
+                color: var(--background);
+                display: flex;
+                align-items: center;
+            }
+
+            h1 img {
+                margin-right: 10px;
+            }
+
+            li a {
+                text-decoration: none;
+                color: inherit;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <img src="https://ca.slack-edge.com/T03S65LAJ2W-U040RMCRAGZ-d3ec9c918d08-72" />
+                Robbert
+            </h1>
+            <ul>
+                <li><a href="https://www.google.com" target="_blank">About Me</a></li>
+                <li>Work</li>
+                <li>Contact</li>
+            </ul>
+        </header>
+    </body>
+</html>
