@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getPasswordLength() {
+            var length = prompt("Enter length between 8 and 128");
+            var lengthNum = +length;
+
+            if (lengthNum < 8 || lengthNum > 128) {
+                return getPasswordLength();
+            }
+
+            return lengthNum;
+        }
+
+        function generatePassword() {
+            var length = getPasswordLength();
+
+            alert("length is " + length);
+        }
+
+        generatePassword();
+    </script>
+</body>
+</html>
