@@ -1,0 +1,75 @@
+Things we know about the project:
+* It will involve user interaction
+* We're dealing with words as a thing that exists in our program
+* We will have a timer that affects game state
+* User actions will affect game state
+* Persist data about win/loss count across page reloads
+
+Game Interactions:
+* When user presses a key, and correctly guesses a letter, we replace the blanks with that guessed letter.
+* When user clicks the start button, the game starts. It is not started until this happens.
+* The timer resets when the game starts
+* When the game ends, the timer should stop, and a message should appear
+* When the user correctly guesses the word, the game ends
+* When the timer runs out, the game ends
+
+TASKS:
+
+
+As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
+
+* We need to have a word
+    * We need to define a variable that tracks the active word
+        * Define a variable equal to a string
+* We need to have some way of tracking the user's guesses
+* We need a way to track the number of blanks, which should be equal to the word letter count
+* We need a way to display the number of blanks
+    * We need a container on the webpage that will hold the elements that represent the blank letters
+    * We need a function that populates the above container based on the number of blanks
+        * Define a function named generateBlanks
+        * Fetch the container element from the DOM
+            * Use document.getElementById to get a reference to the container
+* We need a way to get keyboard input from the player
+* When the user enters a key, we need to check it against the word and update the blanks
+    * When the user enters a key, determine if its valid
+    * Check if the key input exists in the word
+    * If the key input does exist in the word, then update the blanks, replacing blanks with the appropriate letter at the appropriate place
+
+As a user, I want the game to be timed.
+
+* We need a variable that tracks seconds left in the game
+* Every second the game is active, this variable decreases by 1
+* This variable is displayed to the user
+
+As a user, I want to win the game when I have guessed all the letters in the word.
+
+* When the user has filled in all the blanks, the game should end
+* We need to stop the timer
+* We need to display a victory message
+
+As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
+
+* When the timer runs out the game should end
+* Instead of a victory message, display a defeat message
+
+As a user, I want to see my total wins and losses on the screen.
+
+* We need to define two variables, one to hold losses and one to hold wins
+* When the game ends, we need to increment the wins variable in case of victory and the loss variable in case of defeat
+* After incrementing, we need to persist these variables to localStorage
+* When the page loads, we need to fetch these values from localStorage and put them into the win and loss variables
+* When the game ends, show the wins and losses count in the final message
+
+As a user, I want to start the game by clicking on a button.
+
+* We need to create a button on the main page
+* We need a variable to track if the game is started or not
+* If the game is not started, the timer does not decrement
+* If the game is not started, the user's keyboard input is ignored
+* When the start game button is clicked, the game starts
+
+Final Tasks (not handled elsewhere)
+
+* Before the game starts, there is no chosen word
+* We have a list of potential words defined in an array and assigned to a variable.
+* When the game starts, we choose a word at random from the list and assign that as our chosen word
