@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+
+        }
+    </style>
+</head>
+<body>
+    <section data-foo="bar">
+        content
+    </section>
+    <section class="my_class">
+        content2
+    </section>
+    <section id="my_section" style="color: red;">
+        content3
+    </section>
+    <script>
+        var sectionsByTag = document.getElementsByTagName("section");
+
+        var sectionsByClass = document.getElementsByClassName("my_class");
+        
+        var sectionById = document.getElementById("my_section");
+
+        var sectionsBySelector = document.querySelector("#my_section");
+
+        for (var i=0;i<sectionsByTag.length;i++) {
+            var element = sectionsByTag[i];
+            var oldContent = element.textContent;
+            element.textContent = "new content" + i;
+            //console.log(element.getAttribute("class"));
+            element.classList.add("section_" + i);
+            //element.setAttribute("class", "section_" + i);
+            element.dataset.param = "thing";
+            //console.log(element.style.color);
+            element.style.maxWidth = "150px";
+
+            var newElement = document.createElement("div");
+            newElement.textContent = "new div " + i;
+            console.log(newElement);
+            element.appendChild(newElement);
+        }
+
+        sectionsByClass[0].appendChild(sectionById);
+    </script>
+</body>
+</html>
