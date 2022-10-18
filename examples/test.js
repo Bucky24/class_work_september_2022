@@ -7,3 +7,8 @@ var sample = function() {
 sample();
 console.log("Is a defined?", typeof a !== "undefined");
 console.log("Is b defined?", typeof b !== "undefined");
+
+var array = [
+    '12345',
+    1234532
+]
