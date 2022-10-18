@@ -10,5 +10,6 @@ console.log("Is b defined?", typeof b !== "undefined");
 
 var array = [
     '12345',
-    1234532
+    1234532,
+    'foo',
 ]
