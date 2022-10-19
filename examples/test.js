@@ -1,15 +1,35 @@
-// Run the following code and explain the output:
+/*
+Write a function that takes in an input and returns true if it's an integer and false otherwise.
 
-var sample = function() {
-    b = 3;
-    var a = 3;
+Ex:
+Input: "7"
+Output: false
+
+Input: 7
+Output: true
+
+Input: 4.3
+Output: false
+*/
+
+function isInteger(input) {
+    if (typeof input !== "number") {
+        return false;
+    }
+
+    /*var inputAsString = "" + input;
+    if (inputAsString.includes(".")) {
+        return false;
+    }*/
+    var inputAsInteger = Math.floor(input);
+
+    if (inputAsInteger !== input) {
+        return false;
+    }
+
+    return true;
 }
-sample();
-console.log("Is a defined?", typeof a !== "undefined");
-console.log("Is b defined?", typeof b !== "undefined");
 
-var array = [
-    '12345',
-    1234532,
-    'foo',
-]
+console.log(isInteger("7"));
+console.log(isInteger(7));
+console.log(isInteger(4.3));

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Third Party APIs</title>
+</head>
+<body>
+    <script src="api_tokens.js"></script>
+    <script src="utils.js"></script>
+    <script>
+        getMovie("Avengers Endgame").then(function(movieData) {
+            var results = movieData.Search;
+
+            for (var i=0;i<results.length;i++) {
+                console.log(results[i].Title);
+            }
+        });
+
+        getMovie("Lilo & Stitch").then(function(movieData) {
+
+        });
+    </script>
+</body>
+</html>
