@@ -12,7 +12,7 @@ function multiplyNumber(a, b) {
 }
 
 function divideNumber(a, b) {
-
+    return a/b;
 }
 
 function doOperation(a, b, fn) {
