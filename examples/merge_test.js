@@ -7,14 +7,6 @@ function subtractNumber(a, b) {
     return a - b;
 }
 
-function multiplyNumber(a, b) {
-    return a * b;
-}
-
-function divideNumber(a, b) {
-    return a/b;
-}
-
 function doOperation(a, b, fn) {
     return fn(a, b);
 }
