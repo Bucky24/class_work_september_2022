@@ -7,3 +7,4 @@ function doOperation(a, b, fn) {
 }
 
 var result = doOperation(5, 10, getNumber);
+console.log(result);
