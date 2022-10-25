@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Wireframe Building</title>
+        <style>
+            header {
+                background-color: maroon;
+                color: white;
+                padding: 19px;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            main {
+                max-width: 800px;
+                margin: auto;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+            }
+
+            #content_holder {
+                display: flex;
+                flex-grow: 1;
+            }
+
+            #sidebar {
+                width: 200px;
+                background-color: teal;
+                margin-right: 40px;
+            }
+
+            #content {
+                background-color: purple;
+                flex-grow: 1;
+            }
+
+            body {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <header>
+                Header
+            </header>
+            <section id="content_holder">
+                <section id="sidebar">
+                    Sidebar
+                </section>
+                <section id="content">
+                    Content
+                </section>
+            </section>
+        </main>
+    </body>
+</html>
