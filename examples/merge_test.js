@@ -7,6 +7,10 @@ function subtractNumber(a, b) {
     return a - b;
 }
 
+function doDivide(a, b) {
+    return a/b;
+}
+
 function doOperation(a, b, fn) {
     return fn(a, b);
 }
