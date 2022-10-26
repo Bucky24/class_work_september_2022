@@ -1,0 +1,16 @@
+.my_class {
+    background-color: red;
+}
+
+.white_text {
+    color: white;
+}
+
+#my_section {
+    margin-top: 10px;
+}
+
+#main_content .blue span, .red_text {
+    color: red;
+    text-decoration: underline;
+}
