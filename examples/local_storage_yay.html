@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name">
+    <button id="button">Click</button>
+    <span id="name_holder"></span>
+    <script>
+        var nameInputEl = document.getElementById("name");
+        var buttonEl = document.getElementById("button");
+
+        const KEY = "name_key";
+        var valueFromLocalStorage = localStorage.getItem(KEY);
+        valueFromLocalStorage = JSON.parse(valueFromLocalStorage);
+        if (valueFromLocalStorage !== null) {
+            nameInputEl.value = valueFromLocalStorage.name;
+        }
+
+        buttonEl.addEventListener("click", function() {
+            var newName = nameInputEl.value;
+
+            var obj = {
+                name: newName,
+            };
+
+            localStorage.setItem(KEY, JSON.stringify(obj));
+
+            // this has to go after setItem because otherwise it gets old data from localstorage
+            setNameHolder();
+        });
+
+        function setNameHolder() {
+            var nameHolderEl = document.getElementById("name_holder");
+            var valueFromLocalStorage = localStorage.getItem(KEY);
+            valueFromLocalStorage = JSON.parse(valueFromLocalStorage);
+            if (valueFromLocalStorage !== null) {
+                nameHolderEl.textContent = "Your name is " + valueFromLocalStorage.name;
+            }
+        }
+    </script>
+</body>
+</html>
