@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="button_holder">
+        <input type="text" id="item_entry"/>
+        <button data-index="1" id="button1">List 1</button>
+        <button data-index="2" id="button1">List 2</button>
+        <button data-index="3" id="button1">List 3</button>
+    </div>
+    <div>
+        <div data-index="1" class="list"></div>
+        <div data-index="2" class="list"></div>
+        <div data-index="3" class="list"></div>
+    </div>
+    <script>
+        var buttonHolderEl = document.getElementById("button_holder");
+        var inputEl = document.getElementById("item_entry");
+
+        buttonHolderEl.addEventListener("click", function(event) {
+            if (!event.target.dataset.index) {
+                return;
+            }
+
+            const index = event.target.dataset.index;
+            const box = document.querySelector(".list[data-index='" + index + "']");
+
+            const holder = document.createElement("div");
+            holder.textContent = inputEl.value;
+            box.append(holder);
+        });
+    </script>
+</body>
+</html>
