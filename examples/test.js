@@ -1,35 +1,17 @@
-/*
-Write a function that takes in an input and returns true if it's an integer and false otherwise.
-
-Ex:
-Input: "7"
-Output: false
-
-Input: 7
-Output: true
-
-Input: 4.3
-Output: false
-*/
-
-function isInteger(input) {
-    if (typeof input !== "number") {
-        return false;
-    }
-
-    /*var inputAsString = "" + input;
-    if (inputAsString.includes(".")) {
-        return false;
-    }*/
-    var inputAsInteger = Math.floor(input);
-
-    if (inputAsInteger !== input) {
-        return false;
-    }
-
-    return true;
+function sleep(seconds) {
+    return new Promise((resolve, reject) => {
+        setTimeout(reject, seconds * 1000);
+    });
 }
 
-console.log(isInteger("7"));
-console.log(isInteger(7));
-console.log(isInteger(4.3));
+sleep(0.1).then(() => {
+    console.log("sleep is over");
+    return sleep(0.1);
+}).then(() => {
+    console.log("sleep two is over");
+    return sleep(0.1);
+}).then(() => {
+    console.log("sleep three is over");
+}).catch(() => {
+    console.log("project was rejected");
+});
