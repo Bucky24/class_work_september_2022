@@ -1,9 +1,20 @@
 const array = [1,2,3,4,5,6,7,8,9];
 
-function doubleItem(element) {
-    return element * 2;
-}
+const newArray = array.filter((item) => {
+    return item > 3;
+});
 
-const doubles = array.map(doubleItem);
+console.log(newArray);
 
-console.log(doubles);
+const newArray2 = array.map((item) => {
+    if (item < 3) {
+        return 'small';
+    }
+
+    return 'large';
+});
+
+console.log(newArray2);
+
+const newArray3 = array.filter((item) => item > 3).map((item) => item * 2);
+console.log(newArray3);
