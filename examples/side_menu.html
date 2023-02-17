@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+        }
+
+        .menu {
+            display: inline-block;
+            width: 100px;
+            height: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: white;
+            transition: 1s width ease-in-out;
+        }
+
+        .menu_outer {
+            width: 170px;
+            position: relative;
+            z-index: 1;
+            height: calc(100vh - 22px);
+        }
+
+        .menu_outer:hover .menu  {
+            width: 300px;
+        }
+
+        .item {
+            cursor: pointer;
+        }
+
+        main {
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="menu_outer">
+        <section class="menu">
+            <div class="item">Home</div>
+            <div class="item">About</div>
+            <div class="item">Death</div>
+            <div class="item">War</div>
+        </section>
+    </section>
+    <main>
+        some contentlkjsdklfjdklfjsdflksfjsalf;sdjflsd;akfjfkl;sdjfalk;fjdsfklsjfsakldfjdsafklsjafasl;kfjsalfkdsjals;fkdjaflk;dsjfalsk;fjdal
+    </main>
+</body>
+</html>
